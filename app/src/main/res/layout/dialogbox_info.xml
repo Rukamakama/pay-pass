@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="@dimen/deuxCentsVinght"
+    android:layout_height="@dimen/centQuatreVinght"
+    android:background="@color/colorWhite"
+    tools:context=".controler.MainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitleDialogInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/strErrorMsg"
+        android:textSize="@dimen/xTextSize"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="@color/colorRed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMsgDialogInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/cinq"
+        android:lineSpacingExtra="@dimen/cinq"
+        android:text=""
+        android:gravity="center"
+        android:textSize="@dimen/nTextSize"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleDialogInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnOkDialogInfo"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnOkDialogInfo"
+        android:layout_height="@dimen/vinght"
+        android:layout_width="@dimen/quarante"
+        android:layout_margin="@dimen/huit"
+        style="@style/btnRecoveryStyle"
+        android:textSize="@dimen/nTextSize"
+        android:text="@string/strOk"
+        app:layout_constraintTop_toBottomOf="@id/tvMsgDialogInfo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNoDialogInfo"
+        android:layout_height="@dimen/vinght"
+        android:layout_width="@dimen/quarante"
+        style="@style/btnRecoveryStyle"
+        android:textSize="@dimen/nTextSize"
+        android:visibility="gone"
+        android:text="@string/strNo"
+        app:layout_constraintTop_toBottomOf="@id/tvMsgDialogInfo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnOkDialogInfo"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

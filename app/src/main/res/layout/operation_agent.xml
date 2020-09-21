@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controler.MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/main_lyt_ope"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_lyt_ope"
+        android:layout_width="@dimen/troisCentsCinquate"
+        android:layout_height="@dimen/cinqCents50"
+        android:background="@drawable/rounded_coner_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle_agent"
+            android:text="@string/strAgentTel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/tvTitleStyle"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lytBtnOperation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/troisCents"
+            android:layout_marginTop="@dimen/dix"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle_agent"
+            app:layout_constraintBottom_toTopOf="@id/btnAddClient">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRecharge"
+                style="@style/btnStyle"
+                android:text="@string/strRecharge"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btnCompte"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCompte"
+                style="@style/btnStyle"
+                android:text="@string/strCompte"
+                app:layout_constraintTop_toBottomOf="@id/btnRecharge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnAddClient"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="@dimen/quarante"
+            android:scaleType="fitCenter"
+            android:text="@string/strRecharge"
+            android:background="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lytBtnOperation"
+            app:srcCompat="@drawable/ic_add_client" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

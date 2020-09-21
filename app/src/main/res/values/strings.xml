@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">PayPass</string>
+
+    <string name="strHelp">Aide</string>
+    <string name="strContact">Nous contacter</string>
+    <string name="strDeconnect">Deconnection</string>
+    <string name="strConnect">Connexion</string>
+    <string name="strDetresse">Detresse</string>
+    <string name="strCloseAgt">Agents proche</string>
+    <string name="strAgent">Agent</string>
+    <string name="strClient">Client</string>
+    <string name="strBus">Bus</string>
+    <string name="strSign">Se connecter</string>
+    <string name="strScan">Scan</string>
+    <string name="strCode">Code secret</string>
+    <string name="strRecovery">Se souvenir de moi</string>
+    <string name="strSerialNum">Numéro de série</string>
+    <string name="strName">Nom</string>
+    <string name="strAgentTel">Agent : %1$s</string>
+    <string name="strRecharge">Recharger</string>
+    <string name="strRetrait">Retirer</string>
+    <string name="strCompte">Compte</string>
+    <string name="strMontant">Montant</string>
+    <string name="strRechClient">Recharge client</string>
+    <string name="strSolde">Solde : %1$s CDF</string>
+    <string name="strHistorique">Historique</string>
+    <string name="strHistoriqueRech">Historique Recharge</string>
+    <string name="strHistoriqueRetr">Historique retrait</string>
+    <string name="strQuitter">Quitter</string>
+    <string name="strChoixDate">Choisissez une date</string>
+    <string name="strDate">Date</string>
+    <string name="strNum">N°</string>
+    <string name="strCreation">Création</string>
+    <string name="strOk">OK</string>
+    <string name="strNo">Non</string>
+    <string name="strCommencer">Commencer</string>
+    <string name="strRegulier">Regulier</string>
+    <string name="strAbonne">Abonne</string>
+
+    <!-- Les strings des messages d'erreurs pour dialog box -->
+    <string name="strErrorMsg">MESSAGE D\'ERREUR</string><!-- Not used -->
+    <string name="strQrCode">Qr code</string>
+    <string name="strConectIssue">Probleme de connexion au compte</string>
+    <string name="strOffline1"> La carte n\'a jamais été attribuée</string>
+    <string name="strOffline2"> La carte n\'est plus opérationnelle</string>
+    <string name="strOnline">La carte est déjà attribuée</string>
+    <string name="strInvalidCode">Code d\'accès non reconu</string>
+    <string name="strLoginOk">Vous êtes connecté</string>
+    <string name="strEmptyField">%1$s trop court ou vide</string>
+    <string name="strLongField">%1$s trop long. \n La taille maximal est 20</string>
+    <string name="strInvalidField">%1$s invalide</string>
+    <string name="strSoldPetit">solde insuffisant</string>
+    <string name="strPayed">Vous avez payez</string>
+    <string name="strCardAttr">Carte attribuée avec succès</string>
+    <string name="strRechSuccess">Recharge effectuée avec succès</string>
+    <string name="strPrice">Prix en CDF</string>
+    <string-array name="strPrices">
+        <item>350</item>
+        <item>400</item>
+        <item>300</item>
+        <item>200</item>
+    </string-array>
+    <string name="strAideClient">
+        PayPass client est une application mobile
+        qui permet aux utilisateurs de voir leur solde
+        juste en scannant leur QR CODE
+    </string>
+    <string name="strAideAgent">
+        PayPass agent est une application mobile
+        qui permet aux utilisateurs de faire les
+        opération basique d\'un agent PayPass
+    </string>
+    <string name="strAideBus">
+        PayPass bus est une application embarquée
+        qui permet après authentification aux bus
+        de recevoir le payement des clients par monaie
+        virtuelle.
+    </string>
+    <string name="strDetailContact">
+        Lifti sarl \n
+        lititours.com
+    </string>
+
+
+    <!-- Default strings should be deleted after project development -->
+    <string name="defaultNum">12345678</string>
+    <string name="defaultAmount">2000</string>
+    <string name="defaultDate">10\-15\-2019</string>
+    <string name="defaultClient">Mukisa</string>
+
+</resources>

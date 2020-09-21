@@ -1,0 +1,91 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorRed</item>
+        <item name="colorPrimaryDark">@color/colorDarkRed</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="tvTitleStyle" parent="AppTheme">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/vinght</item>
+        <item name="android:textColor">@color/colorGray</item>
+        <item name="android:textSize">@dimen/xxTextSize</item>
+    </style>
+
+    <style name="tvStyle" parent="tvTitleStyle">
+        <item name="android:layout_marginTop">@dimen/dix</item>
+        <item name="android:textColor">@color/colorGray</item>
+        <item name="android:textSize">@dimen/nTextSize</item>
+    </style>
+
+    <style name="edtStyle" parent="AppTheme">
+        <item name="android:layout_height">@dimen/quarante</item>
+        <item name="android:layout_width">@dimen/deuxCentsVinght</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">@dimen/nTextSize</item>
+    </style>
+
+    <style name="imgvStyle" parent="AppTheme">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/huit</item>
+        <item name="android:layout_marginTop">@dimen/deux</item>
+    </style>
+
+    <style name="btnStyle" parent="AppTheme">
+        <item name="android:layout_width">@dimen/centQuatreVinght</item>
+        <item name="android:layout_height">@dimen/cinquate</item>
+        <item name="android:textSize">@dimen/xTextSize</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:background">@drawable/circular_side_red</item>
+    </style>
+    <style name="btnRecoveryStyle" parent="btnStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/huit</item>
+        <item name="android:textColor">@color/colorDarkRed</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/nTextSize</item>
+    </style>
+
+    <!-- ********  Style des elements du table  *********** -->
+
+    <!-- style des titres du tableau -->
+    <style name="tableHeaderStyle" parent="AppTheme">
+        <item name="android:layout_width">@dimen/cent</item>
+        <item name="android:layout_height">@dimen/quarante</item>
+        <item name="android:textSize">@dimen/nTextSize</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@color/colorRed</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">left</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <!-- le premier style des lignes  -->
+    <style name="tableRowsStyle1" parent="tableHeaderStyle">
+        <item name="android:textSize">@dimen/sTextSize</item>
+        <item name="android:textColor">@color/colorGray</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- le deuxieme style des lignes -->
+    <style name="tableRowsStyle2" parent="tableRowsStyle1">
+        <item name="android:background">@color/colorLightRed</item>
+    </style>
+
+</resources>

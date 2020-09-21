@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".controler.MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/main_lyt_cmp"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_lyt_cmp"
+        android:layout_width="@dimen/troisCentsCinquate"
+        android:layout_height="@dimen/cinqCents50"
+        android:background="@drawable/rounded_coner_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvComptAgt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strCompte"
+            style="@style/tvStyle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvSoldeAgt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSoldeAgt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strSolde"
+            style="@style/tvStyle"
+            app:layout_constraintBottom_toTopOf="@id/btnHretr"
+            app:layout_constraintTop_toBottomOf="@id/tvComptAgt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- ****** Components Price selection ********* -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/tvStyle"
+            android:text="@string/strPrice"
+            app:layout_constraintTop_toTopOf="@id/btnHretr"
+            app:layout_constraintStart_toStartOf="@id/btnHretr"
+            app:layout_constraintEnd_toStartOf="@id/spnPriceChooser"/>
+
+        <Spinner
+            android:id="@+id/spnPriceChooser"
+            android:layout_width="@dimen/cent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/btnHretr"
+            app:layout_constraintBottom_toBottomOf="@id/btnHretr"
+            app:layout_constraintStart_toEndOf="@id/tvPrice"
+            app:layout_constraintEnd_toEndOf="@id/btnHretr"/>
+        <!-- ******************************************* -->
+
+        <!-- ********** Les elements des abonnes ************ -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strSolde"
+            style="@style/tvStyle"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tvSoldeAgt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- ************************************************ -->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHretr"
+            style="@style/btnStyle"
+            android:text="@string/strHistoriqueRetr"
+            android:layout_width="@dimen/deuxCentsCinquate"
+            app:layout_constraintBottom_toTopOf="@id/btnHrech"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSoldeAgt" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHrech"
+            style="@style/btnStyle"
+            android:layout_width="@dimen/deuxCentsCinquate"
+            android:text="@string/strHistoriqueRech"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnHretr" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnQuitter"
+            style="@style/btnStyle"
+            android:text="@string/strQuitter"
+            android:layout_width="@dimen/deuxCentsCinquate"
+            app:layout_constraintBottom_toTopOf="@id/btnHrech"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnHretr" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCommencer"
+            style="@style/btnStyle"
+            android:text="@string/strCommencer"
+            android:layout_width="@dimen/deuxCentsCinquate"
+            app:layout_constraintBottom_toTopOf="@id/btnHrech"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnHretr" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

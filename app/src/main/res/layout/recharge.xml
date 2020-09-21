@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controler.MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_lyt_rechRetr"
+        android:layout_width="@dimen/troisCentsCinquate"
+        android:layout_height="@dimen/cinqCents50"
+        android:background="@drawable/rounded_coner_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle_recharge"
+            android:text="@string/strRechClient"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/main_lyt_rechRetr"
+            style="@style/tvTitleStyle"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lytBtnOperation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/troisCents"
+            android:layout_marginTop="@dimen/dix"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle_recharge"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <RadioGroup
+                android:layout_width="@dimen/deuxCentsVinght"
+                android:layout_height="@dimen/quarante"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/edtMontant"
+                app:layout_constraintStart_toStartOf="@id/edtMontant"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbtnRegulier"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/strRegulier"
+                    android:checked="true"
+                    style="@style/tvStyle"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbtnAbonne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/strAbonne"
+                    style="@style/tvStyle"/>
+
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtMontant"
+                android:hint="@string/strMontant"
+                android:layout_height="@dimen/cinquate"
+                style="@style/edtStyle"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btnScanRecharge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgvNom"
+                style="@style/imgvStyle"
+                android:layout_marginTop="0dp"
+                android:layout_height="@dimen/quarante"
+                app:layout_constraintEnd_toEndOf="@id/edtMontant"
+                app:layout_constraintTop_toTopOf="@id/edtMontant"
+                app:srcCompat="@mipmap/ic_money"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnScanRecharge"
+
+                style="@style/btnStyle"
+                android:text="@string/strScan"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtMontant" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

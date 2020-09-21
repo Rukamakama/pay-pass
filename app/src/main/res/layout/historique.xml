@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".controler.MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_lyt_ope"
+        android:layout_width="@dimen/troisCentsCinquate"
+        android:layout_height="@dimen/cinqCents50"
+        android:background="@drawable/rounded_coner_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle_hist"
+            android:layout_marginTop="@dimen/dix"
+            style="@style/tvTitleStyle"
+            android:text="@string/strHistorique"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChoixDate"
+            style="@style/tvStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strChoixDate"
+            app:layout_constraintEnd_toStartOf="@id/btnHDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle_hist" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHDate"
+            android:layout_width="@dimen/cinquate"
+            android:layout_height="@dimen/vinght"
+            android:background="@color/colorRed"
+            android:text="@string/strDate"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="@id/tvChoixDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvChoixDate"
+            app:layout_constraintTop_toTopOf="@id/tvChoixDate" />
+
+        <TableLayout
+            android:id="@+id/tableRetrait"
+            android:layout_width="@dimen/troisCents30"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:stretchColumns="0,1,2,3"
+            app:layout_constraintBottom_toTopOf="@id/btnPrecRetr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvChoixDate">
+
+            <TableRow>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableHeaderStyle"
+                    android:layout_width="@dimen/cinquate"
+                    android:layout_column="0"
+                    android:text="@string/strNum" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableHeaderStyle"
+                    android:layout_column="1"
+                    android:text="@string/strDate" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableHeaderStyle"
+                    android:layout_width="@dimen/quatreVinght"
+                    android:layout_column="2"
+                    android:text="@string/strMontant" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle1"
+                    android:layout_width="@dimen/cinquate"
+                    android:layout_column="0"
+                    android:text="@string/defaultNum" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle1"
+                    android:layout_column="1"
+                    android:text="@string/defaultDate" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle1"
+                    android:layout_width="@dimen/quatreVinght"
+                    android:layout_column="2"
+                    android:text="@string/defaultAmount" />
+            </TableRow>
+
+            <TableRow>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle2"
+                    android:layout_width="@dimen/dix"
+                    android:layout_column="0"
+                    android:text="@string/defaultNum" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle2"
+                    android:layout_column="1"
+                    android:text="@string/defaultDate" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle2"
+                    android:layout_width="@dimen/quatreVinght"
+                    android:layout_column="2"
+                    android:text="@string/defaultAmount" />
+            </TableRow>
+
+            <TableRow>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle1"
+                    android:layout_width="@dimen/cinquate"
+                    android:layout_column="0"
+                    android:text="@string/defaultNum" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle1"
+                    android:layout_column="1"
+                    android:text="@string/defaultDate" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle1"
+                    android:layout_width="@dimen/quatreVinght"
+                    android:layout_column="2"
+                    android:text="@string/defaultAmount" />
+            </TableRow>
+
+            <TableRow>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle2"
+                    android:layout_width="@dimen/dix"
+                    android:layout_column="0"
+                    android:text="@string/defaultNum" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle2"
+                    android:layout_column="1"
+                    android:text="@string/defaultDate" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle2"
+                    android:layout_width="@dimen/quatreVinght"
+                    android:layout_column="2"
+                    android:text="@string/defaultAmount" />
+            </TableRow>
+
+            <TableRow>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle1"
+                    android:layout_width="@dimen/cinquate"
+                    android:layout_column="0"
+                    android:text="@string/defaultNum" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle1"
+                    android:layout_column="1"
+                    android:text="@string/defaultDate" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle1"
+                    android:layout_width="@dimen/quatreVinght"
+                    android:layout_column="2"
+                    android:text="@string/defaultAmount" />
+            </TableRow>
+
+            <TableRow>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle2"
+                    android:layout_width="@dimen/dix"
+                    android:layout_column="0"
+                    android:text="@string/defaultNum" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle2"
+                    android:layout_column="1"
+                    android:text="@string/defaultDate" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle2"
+                    android:layout_width="@dimen/quatreVinght"
+                    android:layout_column="2"
+                    android:text="@string/defaultAmount" />
+            </TableRow>
+
+
+            <TableRow>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle1"
+                    android:layout_width="@dimen/cinquate"
+                    android:layout_column="0"
+                    android:text="@string/defaultNum" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle1"
+                    android:layout_column="1"
+                    android:text="@string/defaultDate" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle1"
+                    android:layout_width="@dimen/quatreVinght"
+                    android:layout_column="2"
+                    android:text="@string/defaultAmount" />
+            </TableRow>
+
+            <TableRow>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle2"
+                    android:layout_width="@dimen/dix"
+                    android:layout_column="0"
+                    android:text="@string/defaultNum" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle2"
+                    android:layout_column="1"
+                    android:text="@string/defaultDate" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/tableRowsStyle2"
+                    android:layout_width="@dimen/quatreVinght"
+                    android:layout_column="2"
+                    android:text="@string/defaultAmount" />
+            </TableRow>
+
+        </TableLayout>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnPrecRetr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tableRetrait"
+            app:layout_constraintTop_toBottomOf="@id/tableRetrait"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/colorWhite"
+            app:srcCompat="@drawable/ic_precedent"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnSuivRetr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/tableRetrait"
+            app:layout_constraintTop_toBottomOf="@id/tableRetrait"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/colorWhite"
+            app:srcCompat="@drawable/ic_suivant"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

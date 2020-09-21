@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".controler.MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/main_lyt_login"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_lyt_login"
+        android:layout_width="@dimen/troisCentsCinquate"
+        android:layout_height="@dimen/cinqCents50"
+        android:background="@drawable/rounded_coner_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle_login"
+            android:text="@string/strConnect"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/main_lyt_login"
+            style="@style/tvTitleStyle"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/quatreCents"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle_login"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtNom"
+                android:hint="@string/strName"
+                style="@style/edtStyle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/edtCode"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgvNom"
+                style="@style/imgvStyle"
+                app:layout_constraintEnd_toEndOf="@id/edtNom"
+                app:layout_constraintTop_toTopOf="@id/edtNom"
+                app:srcCompat="@drawable/ic_name"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtCode"
+                android:hint="@string/strCode"
+                style="@style/edtStyle"
+                android:inputType="textPassword"
+                app:layout_constraintTop_toBottomOf="@id/edtNom"
+                app:layout_constraintBottom_toTopOf="@id/btnScanLogin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgvCode"
+                style="@style/imgvStyle"
+                app:layout_constraintEnd_toEndOf="@id/edtCode"
+                app:layout_constraintTop_toTopOf="@id/edtCode"
+                app:srcCompat="@drawable/ic_lock"/>
+
+            <!--************** Choice Abonne Client ********-->
+            <RadioGroup
+                android:id="@+id/rdgrpLogin"
+                android:layout_width="@dimen/deuxCentsVinght"
+                android:layout_height="@dimen/quarante"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btnScanLogin"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbtnRegulierLogin"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/strRegulier"
+                    android:checked="true"
+                    style="@style/tvStyle"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbtnAbonneLogin"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/strAbonne"
+                    style="@style/tvStyle"/>
+
+            </RadioGroup>
+            <!--*******************************************-->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnScanLogin"
+                style="@style/btnStyle"
+                android:text="@string/strScan"
+                app:layout_constraintBottom_toTopOf="@id/btnRecovery"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtCode" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRecovery"
+                style="@style/btnRecoveryStyle"
+                android:text="@string/strRecovery"
+                app:layout_constraintTop_toBottomOf="@id/btnScanLogin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

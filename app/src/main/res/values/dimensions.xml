@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="xxTextSize">26sp</dimen>
+    <dimen name="xTextSize">22sp</dimen>
+    <dimen name="nTextSize">18sp</dimen>
+    <dimen name="sTextSize">14sp</dimen>
+    <dimen name="deux">2dp</dimen>
+    <dimen name="cinq">5dp</dimen>
+    <dimen name="huit">8dp</dimen>
+    <dimen name="dix">10dp</dimen>
+    <dimen name="vinght">20dp</dimen>
+    <dimen name="quarante">40dp</dimen>
+    <dimen name="cinquate">50dp</dimen>
+    <dimen name="soixante">60dp</dimen>
+    <dimen name="septante">70dp</dimen>
+    <dimen name="quatreVinght">80dp</dimen>
+    <dimen name="cent">100dp</dimen>
+    <dimen name="centQuatreVinght">180dp</dimen>
+    <dimen name="deuxCentsVinght">220dp</dimen>
+    <dimen name="deuxCentsCinquate">250dp</dimen>
+    <dimen name="troisCents">300dp</dimen>
+    <dimen name="troisCents30">330dp</dimen>
+    <dimen name="troisCentsCinquate">350dp</dimen>
+    <dimen name="quatreCents">400dp</dimen>
+    <dimen name="cinqCents50">550dp</dimen>
+
+</resources>
