@@ -365,5 +365,6 @@ public class MainActivity extends AppCompatActivity implements IViewActions, Con
     //TODO : Add camera request programmatically
     //TODO : Update logo
     //TODO : change "a paye" sound to Ok for "abonnees"
+//    TODO : we are here
 
 }
